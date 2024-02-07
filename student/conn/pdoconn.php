@@ -3,7 +3,6 @@ $servername = 'localhost';
 $username = 'root';
 $password = '';
 
-
 try {
     $dbconn = new PDO("mysl:host=$servername;dbname=student", $username, $password);
     $dbconn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
