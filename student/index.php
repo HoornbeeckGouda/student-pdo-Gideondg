@@ -2,20 +2,10 @@
 include 'Header.php';
 ?>
 
-Inloggen <br>
-Naam: <br>
-<input type="text" name="naam"> <br>
-Wachtwoord: <br>
-<input type="password" name="password"> <br>
-<button type="submit">Inloggen</button>
-
-<?php
-$inlognaam = $_POST['naam'];
-$wachtwoord = $_POST['password'];
-
-$query = 'SELECT * FROM gebruikers'
-?>
-
-
+<form action="auth.php" method="POST" class="frmlogin">
+    <label for="fInlog">Inlognaam:</label><input type="text" name="inlognaam" id="fInlog" size="25" placeholder="inlognaam..."><br>
+    <label for="fWachtwoord">Wachtwoord:</label><input type="password" id="fWachtwoord" name="wachtwoord" size="25" placeholder="wachtwoord..."><br>
+    <input type="submit" name="submit" value="login"><br>
+</form>
 </body>
 </html>
